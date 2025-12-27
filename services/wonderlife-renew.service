@@ -1,0 +1,9 @@
+[Unit]
+Description=WonderLife Subscription Auto-Renew
+After=network.target mysql.service
+
+[Service]
+Type=oneshot
+User=discord
+WorkingDirectory=/home/discord/wonderlife
+ExecStart=/usr/bin/python3 -m logic.renewals
